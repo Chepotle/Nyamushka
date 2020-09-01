@@ -33,12 +33,17 @@ body {
 }
 
 .item {
-    position: relative;
+    
 }
 
-.item_img {
-    max-width: 100%;
-    height: auto;
+
+.item_card {
+    width: 320px;
+    height: 480px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
 }
 
 
@@ -47,9 +52,9 @@ body {
 
 
 .item_text {
-    position: absolute;
-    top: 24px;
     left: 49px;
+    padding-left: 49px;
+    padding-top: 24px;
 }
 
 .description {
@@ -89,7 +94,7 @@ body {
     font-size: 42px;
     position: absolute;
     right: 15px;
-    bottom: 46px;
+    bottom: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -97,7 +102,6 @@ body {
     text-align: center;
     span {
         font-size: 21px;
-        
     }
 }
 
@@ -114,6 +118,7 @@ body {
 .buy {
     border-style: dashed;
     border-bottom-width: 1px;
+    cursor: pointer;
 }
 
 
@@ -129,17 +134,24 @@ $def: #1698d9;
     background-color: $def;
 }
 
+.def_img {
+    background-image: url(../img/default.png);
+}
 
 // Default hover
 
 $def_hov: #2ea8e6;
 
-.def_hov_color {
+.hover_active:hover .def_color {
     color: $def_hov;
 }
 
-.def_hov_back {
+.hover_active:hover .def_back {
     background-color: $def_hov;
+}
+
+.def_img.hover_active:hover {
+    background-image: url(../img/default_hover.png);
 }
 
 
@@ -148,7 +160,11 @@ $def_hov: #2ea8e6;
 $sel: #d91667;
 
 .sel_back {
-    color: $sel;
+    background-color: $sel;
+}
+
+.sel_img {
+    background-image: url(../img/selected.png);
 }
 
 
@@ -156,12 +172,25 @@ $sel: #d91667;
 
 $sel_hov: #e62e7a;
 
-.sel_hov_color {
+.hover_active:hover .sel_color {
     color: $sel_hov;
 }
 
-.sel_hov_back {
+.hover_active:hover .sel_back {
     background-color: $sel_hov;
+}
+
+.sel_img.hover_active:hover {
+    background-image: url(../img/selected_hover.png);
+}
+
+.sel_img.hover_active:hover .selected_hover {
+    display: block;
+    color: $sel_hov;
+}
+
+.sel_img.hover_active:hover .on {
+    display: none;
 }
 
 
@@ -181,6 +210,11 @@ $dis: #b3b3b3;
     color: #ffff66;
 }
 
+.dis_img {
+    background-image: url(../img/disabled.png);
+    pointer-events: none;
+}
+
 
 
 
@@ -194,19 +228,8 @@ $dis: #b3b3b3;
     display: none;
 }
 
-.item_footer {
-    display: none;
-}
-
-.item_img {
-    display: none;
-}
 
 
 .on {
-    display: block !important;
-}
-
-.off {
-    display: none !important;
+    display: block;
 }
