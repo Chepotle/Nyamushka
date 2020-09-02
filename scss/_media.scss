@@ -1,3 +1,11 @@
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .section {
+        display: flex;
+        justify-content: center;
+        width: 33.33%;
+    }
+}
+
 @media (max-width: 991.98px) {
 
     .container {
@@ -17,11 +25,10 @@
         width: 100%;
     }
 
-    .item {
+    .section {
         display: flex;
-        flex-direction: column;
-        align-items: center;
         margin-bottom: 40px;
+        justify-content: center;
     }
 
     .header {
@@ -36,3 +43,5 @@
     }
 
 }
+
+
