@@ -1,0 +1,38 @@
+@media (max-width: 991.98px) {
+
+    .container {
+        height: auto;
+    }
+
+    .wraper {
+        flex-wrap: wrap;
+        justify-self: start;
+    }
+
+    .section_fuagra, .section_fish {
+        width: 50%;
+    }
+
+    .section_chicken {
+        width: 100%;
+    }
+
+    .item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+
+    .header {
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 767.98px) {
+
+    .section_fuagra, .section_fish {
+        width: 100%;
+    }
+
+}

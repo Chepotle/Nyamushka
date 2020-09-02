@@ -306,3 +306,43 @@ body {
 .on {
   display: block;
 }
+
+@media (max-width: 991.98px) {
+  .container {
+    height: auto;
+  }
+  .wraper {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-grid-column-align: start;
+        justify-self: start;
+  }
+  .section_fuagra, .section_fish {
+    width: 50%;
+  }
+  .section_chicken {
+    width: 100%;
+  }
+  .item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 40px;
+  }
+  .header {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .section_fuagra, .section_fish {
+    width: 100%;
+  }
+}

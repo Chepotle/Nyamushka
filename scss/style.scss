@@ -217,13 +217,6 @@ $dis: #b3b3b3;
 
 
 
-
-
-
-
-
-
-
 .description {
     display: none;
 }
@@ -233,3 +226,6 @@ $dis: #b3b3b3;
 .on {
     display: block;
 }
+
+
+@import "_media";

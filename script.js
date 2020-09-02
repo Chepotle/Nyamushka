@@ -11,12 +11,9 @@ for (i = 0; i < cards.length; i++) {
         }
 
 
-        if (!card.classList.contains('once_selected')) {
-            card.classList.add('once_selected');
-            card.addEventListener('mouseleave', function (e) {
-                card.querySelector('.item_card').classList.add('hover_active');
-            });
-        }
+        card.addEventListener('mouseleave', function (e) {
+            card.querySelector('.item_card').classList.add('hover_active');
+        });
 
 
         let cardClass = card.querySelector('.item_card').classList;
@@ -41,8 +38,5 @@ for (i = 0; i < cards.length; i++) {
             weightClass.add('def_back');
             itemFooter.innerHTML = itemFooter.getAttribute('data-def');
         }
-
-
-
     });
 }
