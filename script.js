@@ -11,7 +11,7 @@ for (i = 0; i < cards.length; i++) {
         }
 
 
-        card.addEventListener('mouseleave', function (e) {
+        card.addEventListener('mouseleave', function () {
             card.querySelector('.item_card').classList.add('hover_active');
         });
 
